@@ -18,68 +18,21 @@
   <!-- Enlace al manifiesto -->
   <link rel="manifest" href="manifest.json">
 
-  <meta name="theme-color" content="red">
+<meta id="theme-color" name="theme-color" content="#d1c2dd">
+
 </head>
+
 <style>
-  /* --- Estilos --- */
-  .install-alert.hidden {
-    display: none;
+  :root {
+    --g1: #d1c2dd;
+    --g2: #d9d8e6; /* tono intermedio */
+    --g3: #cde7f7;
   }
 
-  .install-alert {
-    height: 100vh;
-    position: fixed;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(136, 136, 136, 0.233);
-    z-index: 9999;
-  }
-
-  .install-card {
-    background: #fff;
-    padding: 20px 20px;
-    border-radius: 3px;
-    text-align: center;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-    animation: fadeIn 0.4s ease-in-out;
-  }
-
-  .install-card p {
-    font-size: 18px;
-    margin-bottom: 12px;
-  }
-
-  .install-card button {
-    background: #db0623;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 8px 16px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-
-  .install-card button:hover {
-    background: #020802;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: scale(0.95);
-    }
-
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
+  body {
+    background: linear-gradient(to left, var(--g1), var(--g2), var(--g3));
   }
 </style>
-
-
 
 <body>
   <div id="install-alert" class="install-alert hidden">
@@ -118,6 +71,14 @@
     </a>
   </div>
 </body>
+<script>
+  // Cambiar automáticamente el color del navegador según el degradado
+  const g2 = getComputedStyle(document.documentElement)
+               .getPropertyValue('--g2')
+               .trim();
+  document.querySelector('meta[name="theme-color"]')
+          .setAttribute('content', g2);
+</script>
 <script>
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js');

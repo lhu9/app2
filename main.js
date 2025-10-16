@@ -7,13 +7,18 @@
   // Mostrar alerta solo si no aceptó antes
   if (!localStorage.getItem(KEY)) {
     window.addEventListener('load', () => {
-      alertBox.classList.remove('hidden');
-      // Ocultar automáticamente después de 6 segundos
+      // Esperar 5 segundos antes de mostrar
       setTimeout(() => {
-        if (!localStorage.getItem(KEY)) {
-          alertBox.classList.add('hidden');
-        }
-      }, 5000);
+        alertBox.classList.remove('hidden');
+
+        // Ocultar automáticamente después de 5 segundos visibles
+        setTimeout(() => {
+          if (!localStorage.getItem(KEY)) {
+            alertBox.classList.add('hidden');
+          }
+        }, 5000);
+
+      },1000);
     });
   }
 
@@ -23,4 +28,3 @@
     alertBox.classList.add('hidden');
   });
 })();
-
