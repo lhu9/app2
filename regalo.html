@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirección según el día</title>
+    <script>
+        function redirigirSegunDia() {
+            const dias = [
+                'domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'
+            ];
+            const hoy = new Date().getDay(); // Obtiene el día de la semana (0 para domingo, 6 para sábado)
+            const diaHoy = dias[hoy];
+
+            switch(diaHoy) {
+                case 'domingo':
+                    //sesion de fotos
+                    window.location.href = 'domingo.html';
+                    break;
+                case 'lunes':
+                    //sesion de fotos
+                    window.location.href = 'lunes.html';
+                    break;
+                case 'martes':
+                    // mates con tortilla
+                    window.location.href = 'martes.html';
+                    break;
+                    //chocolates bonobon?
+                case 'miércoles':
+                    window.location.href = 'miercoles.html';
+                    break;
+                case 'jueves':
+                    //flores amarillas 
+                    window.location.href = 'jueves.html';
+                    break;
+                case 'viernes':
+                    //carta
+                    window.location.href = 'viernes.html';
+                    break;
+                    //tomemos mates en panna
+                case 'sábado':
+                    window.location.href = 'sabado.html';
+                    break;
+                    //cafe o maraton de serie
+                default:
+                    console.log('Fin de semana o día no configurado');
+            }
+        }
+
+        // Ejecuta la función al cargar la página
+        window.onload = redirigirSegunDia;
+    </script>
+</head>
+<body>
+</body>
+</html>
