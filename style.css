@@ -394,3 +394,9 @@ a {
       transform: scale(1);
     }
   }
+
+  .aler-gif{
+    border-top: 1px solid rgb(0, 0, 0);
+    border-radius: -5px;
+    box-shadow: 2px 4px 10px #000000c0;
+  }
