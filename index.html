@@ -1,31 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
- 
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>lhuis</title>
+
+  <!-- Estilos y fuentes -->
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
- 
-  <!-- Icono para la app -->
-  <link rel="icon" href="icon-192.png" type="image/png">
-  
-  <!-- Enlace al manifiesto -->
+
+  <!-- SEO y descripción -->
+  <meta name="description"
+    content="Descubrí tu historia a través de tus fotos. Esta app te permite revivir tus recuerdos, organizar tus momentos favoritos y disfrutarlos cuando quieras. ¡Cada foto guarda una emoción que vale la pena recordar!">
+  <meta name="robots" content="noindex">
+  <meta name="csrf-token" content="KrFrYiCGNrIHVyRx0ou3pWq4NemLxHP2T6i8ZlIO">
+  <link rel="canonical" href="https://lhu9.github.io/app2/">
+
+  <!-- Open Graph (redes sociales) -->
+  <meta property="og:site_name" content="lhuis">
+  <meta property="og:title" content="lhuis">
+  <meta property="og:description"
+    content="Descubrí tu historia a través de tus fotos. Esta app te permite revivir tus recuerdos, organizar tus momentos favoritos y disfrutarlos cuando quieras. ¡Cada foto guarda una emoción que vale la pena recordar!">
+  <meta property="og:url" content="https://lhu9.github.io/app2/">
+  <meta property="og:type" content="website">
+  <meta property="og:ttl" content="864000">
+  <meta property="og:image" content="https://res.cloudinary.com/dslvhklx8/image/upload/v1760616949/ico_n69x78.jpg">
+  <meta property="og:image:width" content="345">
+  <meta property="og:image:height" content="518">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:title" content="lhuis">
+  <meta name="twitter:description"
+    content="Descubrí tu historia a través de tus fotos. Esta app te permite revivir tus recuerdos, organizar tus momentos favoritos y disfrutarlos cuando quieras. ¡Cada foto guarda una emoción que vale la pena recordar!">
+  <meta name="twitter:image" content="https://res.cloudinary.com/dslvhklx8/image/upload/v1760616949/ico_n69x78.jpg">
+  <meta name="twitter:url" content="https://lhu9.github.io/app2/">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Schema / Microdata -->
+  <meta itemprop="name" content="lhuis">
+  <meta itemprop="description"
+    content="Descubrí tu historia a través de tus fotos. Esta app te permite revivir tus recuerdos, organizar tus momentos favoritos y disfrutarlos cuando quieras. ¡Cada foto guarda una emoción que vale la pena recordar!">
+  <meta itemprop="url" content="https://lhu9.github.io/app2/">
+  <meta itemprop="thumbnailUrl" content="https://res.cloudinary.com/dslvhklx8/image/upload/v1760616949/ico_n69x78.jpg">
+
+  <meta name="generator" content="Hola soy lhuis">
+
+  <!-- ====================== -->
+  <!-- APP / PWA (instalable) -->
+  <!-- ====================== -->
+  <link rel="icon" href="https://res.cloudinary.com/dslvhklx8/image/upload/v1760616949/ico_n69x78.jpg" type="image/png">
   <link rel="manifest" href="manifest.json">
 
-<meta id="theme-color" name="theme-color" content="#d1c2dd">
-
+  <link rel="icon" type="image/x-icon"
+    href="https://res.cloudinary.com/dslvhklx8/image/upload/v1760616949/ico_n69x78.jpg">
+  <!-- =========tema de color============= -->
+  <meta id="theme-color" name="theme-color" content="#d1c2dd">
 </head>
 
 <style>
   :root {
     --g1: #d1c2dd;
-    --g2: #d9d8e6; /* tono intermedio */
+    --g2: #d9d8e6;
+    /* tono intermedio */
     --g3: #cde7f7;
   }
 
@@ -35,6 +74,7 @@
 </style>
 
 <body>
+  <!---- Alrta ---->
   <div id="install-alert" class="install-alert hidden">
     <div class="install-card">
 
@@ -42,12 +82,18 @@
       <button id="accept-btn">Aceptar</button>
     </div>
   </div>
+
+  <!---- conteniod ---->
   <div class="cls">
     <div class="contenido">
+
+      <!--=== imagen portada ===-->
       <img class="t-p" src="img/generated_text.png" alt="">
       <video class="portada" src="img/1016.mp4" autoplay loop muted></video>
     </div>
     <div class="datos">
+
+      <!--=== imagen info con psd ===-->
       <img class="linea"
         src="img/one-continuous-image-of-heart-shape-and-color-thin-contour-love-sign-and-romantic-symbol-for-greeting-card-and-web-banner-in-simple-linear-style-editable-scribble-outline-illustration-eps-10-vector-(1).jpg"
         alt="">
@@ -74,17 +120,17 @@
 <script>
   // Cambiar automáticamente el color del navegador según el degradado
   const g2 = getComputedStyle(document.documentElement)
-               .getPropertyValue('--g2')
-               .trim();
+    .getPropertyValue('--g2')
+    .trim();
   document.querySelector('meta[name="theme-color"]')
-          .setAttribute('content', g2);
+    .setAttribute('content', g2);
 </script>
 <script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js');
-}
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js');
+  }
 </script>
-
+<!-- =========Instalar app============= -->
 <script src="main.js"></script>
 <script src="app.js"></script>
 <script src="sw.js"></script>

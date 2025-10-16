@@ -28,3 +28,26 @@
     alertBox.classList.add('hidden');
   });
 })();
+
+
+//alera qr
+function qr() {
+        Swal.fire({
+            html: '<div class="ico-qr-aler2">'+
+    '<img class="ico-qr-aler2-img"  src="img/qr-code (1).png" alt="">'+
+'</div>',
+
+            //tamaño
+            imageWidth: 300,
+            imageHeight: 300,
+            //cerrar
+            padding: '0rem',
+            showCloseButton: true,
+            showConfirmButton: false,
+            backdrop: `
+		rgb(54 54 54 / 58%)  `,
+            background: 'linear-gradient(90deg, var(--g1), var(--g2), var(--g3))',
+        })
+    }
+
+
