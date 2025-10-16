@@ -13,17 +13,19 @@
 </head>
 
 <body>
-    <div class="contenido">
-        <img class="ico" src="img/ico.jpg" alt="">
-        <h1>Mi Aplicación</h1>
-        <p>Compartir o escanear app</p>
-        <div class="div">
+    <div class="dev">
+        <div class="contenido-2">
+            <img class="ico" src="img/ico.jpg" alt="">
+            <h1>Mi Aplicación</h1>
+            <p>Compartir o escanear app</p>
+            <div class="div">
 
-            <img id="share-btn" class="qr-img" src="img/com.png" alt="">
-            </a>
-            <img onclick="qr();" class="qr-img" src="img/qr.jpg" alt="">
+                <img id="share-btn" class="qr-img" src="img/com.png" alt="">
+                </a>
+                <img onclick="qr();" class="qr-img" src="img/qr.jpg" alt="">
 
 
+            </div>
         </div>
 </body>
 
@@ -41,7 +43,7 @@
                 await navigator.share({
                     title: 'Mirá esta web ✨',
                     text: 'Encontré algo que te va a gustar:',
-                    url:'https://lhu9.github.io/app2/',
+                    url: 'https://lhu9.github.io/app2/',
                 });
                 console.log('Compartido con éxito');
             } catch (err) {
