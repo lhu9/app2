@@ -16,9 +16,9 @@
           if (!localStorage.getItem(KEY)) {
             alertBox.classList.add('hidden');
           }
-        }, 5000);
+        }, 30000);
 
-      },1000);
+      },6000);
     });
   }
 
