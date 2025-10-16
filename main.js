@@ -1,13 +1,12 @@
-
-(function() {
+// JS con botón de cerrar
+(function () {
   const KEY = 'installAppAccepted';
   const alertBox = document.getElementById('install-alert');
   const acceptBtn = document.getElementById('accept-btn');
+  const closeBtn = document.getElementById('close-btn');
 
-  // Mostrar alerta solo si no aceptó antes
   if (!localStorage.getItem(KEY)) {
     window.addEventListener('load', () => {
-      // Esperar 5 segundos antes de mostrar
       setTimeout(() => {
         alertBox.classList.remove('hidden');
 
@@ -16,15 +15,19 @@
           if (!localStorage.getItem(KEY)) {
             alertBox.classList.add('hidden');
           }
-        }, 30000);
-
-      },1000);
+        }, 55000);
+      }, 3000);
     });
   }
 
-  // Si presiona Aceptar → guardar y ocultar para siempre
+  // Aceptar → guardar y ocultar
   acceptBtn.addEventListener('click', () => {
     localStorage.setItem(KEY, 'true');
+    alertBox.classList.add('hidden');
+  });
+
+  // Cerrar con la "X" → solo ocultar (no guardar)
+  closeBtn.addEventListener('click', () => {
     alertBox.classList.add('hidden');
   });
 })();

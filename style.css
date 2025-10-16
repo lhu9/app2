@@ -356,11 +356,12 @@ a {
 
   .install-card {
     background: #fff;
-    padding: 20px 20px;
+    padding: 10px 20px 20px 20px;
     border-radius: 3px;
     text-align: center;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.274);
     animation: fadeIn 0.4s ease-in-out;
+  
   }
 
   .install-card p {
@@ -369,8 +370,10 @@ a {
   }
 
   .install-card button {
+    width: 60%;
     background: linear-gradient(90deg, var(--g1), var(--g2), var(--g3));
-    color: #fff;
+    color: #ffffff;
+    text-shadow: none;
     border: none;
     border-radius: 8px;
     padding: 8px 16px;
@@ -395,8 +398,21 @@ a {
     }
   }
 
+
   .aler-gif{
     border-top: 1px solid rgb(0, 0, 0);
     border-radius: -5px;
     box-shadow: 2px 4px 10px #000000c0;
   }
+  
+.x{
+  width: 100%;
+  height: 30px;
+  background-color: rgba(255, 0, 0, 0);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.close-btn{
+  color: red;
+}
